@@ -2092,42 +2092,59 @@ a.cta-button:hover {
 /* 更新左右按鈕樣式 */
 .case-navigation {
     display: flex;
-    justify-content: center; /* 改為置中對齊 */
-    gap: 1rem; /* 按鈕之間的間距 */
+    justify-content: center;
+    gap: 1rem;
     margin-top: 2rem;
+    padding: 0;
 }
 
-.nav-btn {
-    background: white;
-    border: 1px solid #E5E7EB;
-    border-radius: 50%;
+.case-navigation .nav-btn {
     width: 40px;
     height: 40px;
-    display: flex;
+    border-radius: 50%;
+    border: 1px solid #E5E7EB;
+    background-color: white;
+    color: var(--text-secondary);
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: var(--text-secondary);
+    padding: 0;
+    margin: 0;
 }
 
-.nav-btn:hover {
-    background: var(--primary-color);
-    color: white;
+.case-navigation .nav-btn i {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.case-navigation .nav-btn:hover {
+    background-color: var(--primary-color);
     border-color: var(--primary-color);
+    color: white;
 }
 
-.nav-btn:disabled {
+.case-navigation .nav-btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+    background-color: #F3F4F6;
+    border-color: #E5E7EB;
+    color: #9CA3AF;
 }
 
-/* 移除拖曳相關樣式 */
-.case-slider {
-    cursor: default;
-    user-select: auto;
-}
+/* 確保在不同螢幕尺寸下保持一致 */
+@media (max-width: 768px) {
+    .case-navigation {
+        margin-top: 1.5rem;
+    }
 
-.case-slider:active {
-    cursor: default;
+    .case-navigation .nav-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .case-navigation .nav-btn i {
+        font-size: 0.875rem;
+    }
 } 
