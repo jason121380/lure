@@ -2087,4 +2087,47 @@ a.cta-button:hover {
     .footer-logo {
         width: 50px; /* 從 70px 縮小到 50px */
     }
+}
+
+/* 更新左右按鈕樣式 */
+.case-navigation {
+    display: flex;
+    justify-content: center; /* 改為置中對齊 */
+    gap: 1rem; /* 按鈕之間的間距 */
+    margin-top: 2rem;
+}
+
+.nav-btn {
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-secondary);
+}
+
+.nav-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* 移除拖曳相關樣式 */
+.case-slider {
+    cursor: default;
+    user-select: auto;
+}
+
+.case-slider:active {
+    cursor: default;
 } 

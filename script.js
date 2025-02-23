@@ -432,130 +432,57 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// 案例輪播功能
+// 更新案例輪播功能
 document.addEventListener('DOMContentLoaded', function() {
     const slider = document.querySelector('.case-slider');
     const cards = document.querySelectorAll('.case-card');
-    const dotsContainer = document.querySelector('.case-dots');
+    const prevBtn = document.querySelector('.nav-btn.prev');
+    const nextBtn = document.querySelector('.nav-btn.next');
     let currentIndex = 0;
-    let startX = 0;
-    let scrollLeft = 0;
-    let isDown = false;
 
-    // 根據螢幕寬度計算需要的導航點數量和每次滑動的卡片數
-    function getSliderConfig() {
+    // 計算可見卡片數量
+    function getVisibleCards() {
         if (window.innerWidth >= 1024) {
-            return { dotsCount: 2, cardsPerView: 3 }; // 電腦版：2個點，每次3張卡片
+            return 3; // 電腦版顯示3張
         } else if (window.innerWidth >= 768) {
-            return { dotsCount: 3, cardsPerView: 2 }; // 平板版：3個點，每次2張卡片
-        } else {
-            return { dotsCount: 6, cardsPerView: 1 }; // 手機版：6個點，每次1張卡片
+            return 2; // 平板版顯示2張
         }
+        return 1; // 手機版顯示1張
     }
 
-    // 創建導航點
-    function createDots() {
-        dotsContainer.innerHTML = '';
-        const { dotsCount } = getSliderConfig();
-        
-        for (let i = 0; i < dotsCount; i++) {
-            const dot = document.createElement('div');
-            dot.classList.add('case-dot');
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => goToSlide(i));
-            dotsContainer.appendChild(dot);
-        }
+    // 更新按鈕狀態
+    function updateButtons() {
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= cards.length - getVisibleCards();
     }
 
-    // 更新導航點
-    function updateDots() {
-        const { cardsPerView } = getSliderConfig();
-        const currentDot = Math.floor(currentIndex / cardsPerView);
-        
-        document.querySelectorAll('.case-dot').forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentDot);
-        });
-    }
-
-    // 滑動到指定幻燈片組
-    function goToSlide(dotIndex) {
-        const { cardsPerView } = getSliderConfig();
-        currentIndex = dotIndex * cardsPerView;
-        
-        // 計算每個卡片的實際寬度（包含間距）
+    // 滑動到指定位置
+    function slideTo(index) {
         const cardWidth = slider.querySelector('.case-card').offsetWidth;
         const gap = parseInt(window.getComputedStyle(slider).gap);
-        const slideWidth = cardWidth + gap;
-        
-        // 計算滑動距離
-        const offset = -slideWidth * currentIndex;
-        slider.style.transform = `translateX(${offset}px)`;
-        updateDots();
+        slider.style.transform = `translateX(-${index * (cardWidth + gap)}px)`;
+        currentIndex = index;
+        updateButtons();
     }
 
-    // 處理滑動
-    function handleSlide(direction) {
-        const { cardsPerView } = getSliderConfig();
-        const maxIndex = Math.ceil(cards.length / cardsPerView) - 1;
-        const currentDot = Math.floor(currentIndex / cardsPerView);
-
-        if (direction === 'next' && currentDot < maxIndex) {
-            goToSlide(currentDot + 1);
-        } else if (direction === 'prev' && currentDot > 0) {
-            goToSlide(currentDot - 1);
-        }
-    }
-
-    // 滑鼠事件
-    slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        slider.style.cursor = 'grabbing';
-        startX = e.pageX - slider.offsetLeft;
-    });
-
-    slider.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX);
-        
-        if (Math.abs(walk) > 100) {
-            if (walk > 0) {
-                handleSlide('prev');
-            } else {
-                handleSlide('next');
-            }
-            isDown = false;
+    // 按鈕事件
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            slideTo(currentIndex - 1);
         }
     });
 
-    // 觸控事件
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    slider.addEventListener('touchstart', e => {
-        touchStartX = e.touches[0].clientX;
-    });
-
-    slider.addEventListener('touchend', e => {
-        touchEndX = e.changedTouches[0].clientX;
-        const diff = touchStartX - touchEndX;
-        
-        if (Math.abs(diff) > 50) {
-            if (diff > 0) {
-                handleSlide('next');
-            } else {
-                handleSlide('prev');
-            }
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < cards.length - getVisibleCards()) {
+            slideTo(currentIndex + 1);
         }
     });
 
     // 初始化
-    createDots();
-    
+    updateButtons();
+
     // 監聽視窗大小變化
     window.addEventListener('resize', () => {
-        createDots();
-        goToSlide(0); // 重置到第一組
+        slideTo(0);
     });
 }); 
