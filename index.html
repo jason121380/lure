@@ -13,7 +13,9 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <img src="images/logo.png" alt="LURE AI-Martech" class="logo-img">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="LURE AI-Martech" class="logo-img">
+                </a>
             </div>
             <div class="nav-links">
                 <a href="#digital-marketing">數位行銷</a>
@@ -72,7 +74,7 @@
            
             <div class="service-grid">
                 <!-- 數位行銷區塊 -->
-                <div class="service-section">
+                <div class="service-section" id="digital-marketing">
                     <h2 class="service-title">數位行銷</h2>
                     <div class="service-card">
                         <div class="service-content">
@@ -151,29 +153,61 @@
                 </div>
 
                 <!-- AI智能系統區塊 -->
-                <div class="service-section">
-                    <h2 class="service-title" id="ai-system">AI智能系統</h2>
+                <div class="service-section" id="tech">
+                    <h2 class="service-title">AI智能系統</h2>
                     <div class="service-card">
                         <div class="service-content">
                             <div class="service-tabs">
-                                <button class="tab-btn active" data-tab="tech-1">POS系統</button>
-                                <button class="tab-btn" data-tab="tech-2">手機預約</button>
-                                <button class="tab-btn" data-tab="tech-3">AI 廣告助手</button>
-                                <button class="tab-btn" data-tab="tech-4">AI 法律顧問</button>
-                                <button class="tab-btn" data-tab="tech-5">AI Line客服</button>
+                                <button class="tab-btn active" data-tab="tab-1">手機預約</button>
+                                <button class="tab-btn" data-tab="tab-2">AI廣告助手</button>
+                                <button class="tab-btn" data-tab="tab-3">AI法律顧問</button>
+                                <button class="tab-btn" data-tab="tab-4">AI LINE客服</button>
                             </div>
                             <div class="service-details">
-                                <div class="tab-content active" id="tech-1">
-                                    <h4>BOS店務管理系統</h4>
-                                    <p>全方位店務管理解決方案，提升營運效率</p>
+                                <!-- 手機預約內容 -->
+                                <div class="tab-content active" id="tab-1">
+                                    <h4>24小時線上預約系統</h4>
+                                    <p>讓顧客隨時隨地都能輕鬆預約，提升預約率與來客數</p>
                                     <ul>
-                                        <li>會員管理</li>
-                                        <li>庫存管理</li>
-                                        <li>預約排程</li>
-                                        <li>業績報表</li>
+                                        <li>自動化預約管理，減少人工作業時間</li>
+                                        <li>智能排程系統，避免時段重疊</li>
+                                        <li>自動提醒功能，降低爽約率</li>
+                                        <li>數據分析報表，掌握營運狀況</li>
                                     </ul>
                                 </div>
-                                <!-- 其他標籤內容... -->
+                                <!-- AI廣告助手內容 -->
+                                <div class="tab-content" id="tab-2">
+                                    <h4>智能廣告投放系統</h4>
+                                    <p>運用AI技術優化廣告投放，提升廣告效益與投資報酬率</p>
+                                    <ul>
+                                        <li>智能受眾分析，精準鎖定目標客群</li>
+                                        <li>自動優化出價策略，降低廣告成本</li>
+                                        <li>多平台整合投放，擴大觸及範圍</li>
+                                        <li>即時成效追蹤，靈活調整策略</li>
+                                    </ul>
+                                </div>
+                                <!-- AI法律顧問內容 -->
+                                <div class="tab-content" id="tab-3">
+                                    <h4>智能法務諮詢系統</h4>
+                                    <p>提供即時法律建議，協助企業降低法律風險</p>
+                                    <ul>
+                                        <li>合約範本生成，快速建立法律文件</li>
+                                        <li>法規遵循檢查，確保營運合法性</li>
+                                        <li>智能風險評估，預防法律糾紛</li>
+                                        <li>24小時線上諮詢，即時解答疑問</li>
+                                    </ul>
+                                </div>
+                                <!-- AI LINE客服內容 -->
+                                <div class="tab-content" id="tab-4">
+                                    <h4>智能客服系統</h4>
+                                    <p>24小時自動回覆客戶問題，提升客服效率與滿意度</p>
+                                    <ul>
+                                        <li>自動問答系統，快速回覆常見問題</li>
+                                        <li>智能對話引導，提供精準服務</li>
+                                        <li>多語言支援，服務不同客群</li>
+                                        <li>數據分析報表，持續優化服務品質</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -259,8 +293,8 @@
                 </div>
 
                 <!-- 行銷課程區塊 -->
-                <div class="service-section">
-                    <h2 class="service-title" id="marketing-course">行銷課程</h2>
+                <div class="service-section" id="course">
+                    <h2 class="service-title">行銷課程</h2>
                     <div class="service-card">
                         <div class="service-content">
                             <div class="service-tabs">
@@ -609,8 +643,8 @@
                 <div class="footer-grid">
                     <!-- 公司資訊 -->
                     <div class="footer-col company-info">
-                        <img src="images/logo-white.png" alt="LURE AI-Martech" class="footer-logo">
-                        <p>專注於 美業「數位轉型」與「業績成長」的全方位解決方案</p>
+                        <img src="images/logo2.png" alt="LURE AI-Martech" class="footer-logo">
+                        <p>專注於美業數位轉型與業績成長的全方位解決方案</p>
                         <div class="social-links">
                             <a href="#" target="_blank">
                                 <i class="fab fa-instagram"></i>

@@ -198,9 +198,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelector('.nav-links');
     const body = document.body;
 
-    // 定義選單項目
+    // 更新選單項目的 href
     const menuItems = [
-        { href: '#marketing', text: '數位行銷' },
+        { href: '#digital-marketing', text: '數位行銷' },
         { href: '#tech', text: 'AI智能系統' },
         { href: '#consulting', text: '顧問服務' },
         { href: '#course', text: '行銷課程' },
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const targetElement = document.querySelector(href);
                 if (targetElement) {
                     const navHeight = document.querySelector('.navbar').offsetHeight;
-                    const targetPosition = targetElement.offsetTop - navHeight;
+                    const targetPosition = targetElement.offsetTop - navHeight - 20; // 添加額外間距
 
                     window.scrollTo({
                         top: targetPosition,
@@ -390,31 +390,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
 
     // 處理所有導航連結的點擊事件（包括電腦版和手機版）
-    document.querySelectorAll('.nav-links a, .service-tabs .tab-btn').forEach(link => {
+    document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', (e) => {
-            const href = link.getAttribute('href') || link.getAttribute('data-tab');
+            const href = link.getAttribute('href');
             
-            // 如果有錨點，執行滾動
             if (href && href.startsWith('#')) {
                 e.preventDefault();
                 const targetElement = document.querySelector(href);
                 if (targetElement) {
-                    // 計算目標位置（考慮固定導航欄的高度）
                     const navHeight = document.querySelector('.navbar').offsetHeight;
-                    const targetPosition = targetElement.offsetTop - navHeight;
+                    const targetPosition = targetElement.offsetTop - navHeight - 20; // 添加額外間距
 
-                    // 平滑滾動到目標位置
                     window.scrollTo({
                         top: targetPosition,
                         behavior: 'smooth'
                     });
 
-                    // 如果是手機版，關閉選單
-                    if (window.innerWidth <= 1024) {
-                        mobileMenuBtn.classList.remove('active');
-                        navLinks.classList.remove('active');
-                        body.classList.remove('menu-open');
-                    }
+                    // 關閉手機版選單
+                    mobileMenuBtn.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    body.classList.remove('menu-open');
                 }
             }
         });
