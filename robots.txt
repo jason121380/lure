@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lure.com.tw/sitemap.xml 

@@ -1,0 +1,14 @@
+{
+    "name": "LURE AI-Martech",
+    "short_name": "LURE",
+    "icons": [
+        {
+            "src": "/favicon/web-app-manifest-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#FF6B2C",
+    "background_color": "#ffffff",
+    "display": "standalone"
+} 
