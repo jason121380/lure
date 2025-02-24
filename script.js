@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { href: '#course', text: '行銷課程' },
         { href: '#cases', text: '實際案例' },
         { href: '#incubator', text: '創業孵化器' },
-        { href: '#contact', text: '立即諮詢', class: 'contact-btn' }
+        { href: 'https://lin.ee/DGhde7E', text: '立即諮詢', class: 'contact-btn', target: '_blank' }
     ];
 
     // 重新生成手機版選單
@@ -220,6 +220,9 @@ document.addEventListener('DOMContentLoaded', function() {
             link.textContent = item.text;
             if (item.class) {
                 link.className = item.class;
+            }
+            if (item.target) {
+                link.target = item.target;
             }
             mobileNav.appendChild(link);
         });
@@ -357,7 +360,7 @@ function handleIntersection(entries, observer) {
                 if (!number.dataset.animated) {
                     const endValue = parseInt(number.textContent);
                     number.dataset.animated = 'true';
-                    animateNumber(number, 0, endValue, 800); // 使用更快的動畫時間
+                    animateNumber(number, 0, endValue, 2500); // 從 800 改為 2500，延長到 2.5 秒
                 }
             });
             observer.unobserve(entry.target);
@@ -369,8 +372,8 @@ function handleIntersection(entries, observer) {
 function animateNumber(element, start, end, duration) {
     let current = start;
     const range = end - start;
-    const increment = Math.ceil(range / 20); // 更大的增量
-    const stepTime = Math.floor(duration / 20); // 更少的步驟
+    const increment = Math.ceil(range / 50); // 從 20 改為 50，使動畫更平滑
+    const stepTime = Math.floor(duration / 50); // 從 20 改為 50，增加動畫步數
     const suffix = element.textContent.replace(/[0-9]/g, '');
     
     const timer = setInterval(function() {

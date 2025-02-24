@@ -370,16 +370,10 @@ body {
 
 /* 更新服務標題樣式 */
 .service-title {
-    font-size: 1.75rem;
-    color: var(--text-primary);
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    padding: 0;
-    background: none;
-    border-radius: 0;
-    display: block;
-    scroll-margin-top: 80px;  /* 根據導航欄高度調整 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
 .service-card {
@@ -467,10 +461,17 @@ body {
     line-height: 1.7;
 }
 
+.tab-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .tab-content ul li {
-    font-size: 1rem;
-    padding-left: 1.75rem;
-    margin-bottom: 1rem;
+    padding-left: 0;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
 }
 
 /* 響應式調整 */
@@ -625,110 +626,72 @@ body {
     display: none;
 }
 
-/* 客戶 logo 牆樣式 */
+/* 更新客戶 logo 牆樣式 */
 .client-logos {
     padding: 6rem 0;
     background: white;
-    overflow: hidden;
 }
 
-.logo-slider-container {
-    position: relative;
-    padding: 2rem 0;
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden;
-}
-
-.logo-track {
-    display: flex;
-    animation: scroll 30s linear infinite;
-    width: fit-content;
-    margin: 2rem 0;
-}
-
-.logo-track.reverse {
-    animation: scroll-reverse 30s linear infinite;
-}
-
-.logo-group {
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    max-width: 1200px;
     padding: 0 2rem;
 }
 
 .logo-item {
-    flex: 0 0 calc(100% / 8); /* 平均分配寬度 */
-    padding: 0 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
+    padding: 1.5rem;  /* 增加内边距 */
 }
 
 .logo-item img {
     max-width: 100%;
-    max-height: 60px;
+    height: auto;
+    max-height: 180px;
     object-fit: contain;
     filter: grayscale(100%);
+    transition: all 0.3s ease;
 }
 
-/* 動畫效果 */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-@keyframes scroll-reverse {
-    0% {
-        transform: translateX(-50%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+.logo-item:hover img {
+    filter: grayscale(0);
 }
 
 /* 響應式調整 */
 @media (max-width: 1024px) {
-    .logo-item {
-        padding: 0 0.75rem;
+    .logo-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
     }
 
     .logo-item img {
-        max-height: 50px;
+        max-height: 150px;
     }
 }
 
 @media (max-width: 768px) {
-    .logo-group {
-        padding: 0 1rem;
-    }
-
-    .logo-item {
-        padding: 1rem 0.5rem;
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr);  /* 改为两列 */
+        gap: 2rem;  /* 增加间距 */
+        padding: 0 1.5rem;
     }
 
     .logo-item img {
-        max-height: 40px;
+        max-height: 120px;
     }
+}
 
-    .logo-track {
-        margin: 3rem 0;
+@media (max-width: 480px) {
+    .logo-grid {
+        gap: 1.5rem;  /* 小屏幕稍微减少间距 */
     }
-
-    .logo-track:first-child {
-        margin-top: 2rem;
-    }
-
-    .logo-track:last-child {
-        margin-bottom: 2rem;
+    
+    .logo-item img {
+        max-height: 100px;
     }
 }
 
@@ -1340,8 +1303,8 @@ body {
 
 .incubator-features {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
+    grid-template-columns: repeat(3, 1fr); /* 改為三欄式布局 */
+    gap: 2rem;
     margin-top: 3rem;
 }
 
@@ -1365,12 +1328,17 @@ body {
     width: 48px;
     height: 48px;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-light);
+    border-radius: 12px;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
 }
 
-.feature-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.feature-icon i {
+    font-size: 24px;
 }
 
 .feature-text h3 {
@@ -1391,15 +1359,29 @@ body {
     margin-top: 3rem;
 }
 
+/* 懸停效果 */
+.feature-item:hover .feature-icon {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
 /* 響應式調整 */
+@media (max-width: 1024px) {
+    .incubator-features {
+        grid-template-columns: repeat(2, 1fr); /* 平板改為兩欄 */
+        gap: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
-    .incubator {
-        padding: 4rem 0;
+    .incubator-features {
+        grid-template-columns: 1fr; /* 手機改為單欄 */
+        gap: 1rem;
     }
 
-    .incubator-features {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    .incubator {
+        padding: 4rem 0;
     }
 
     .feature-item {
@@ -1412,6 +1394,15 @@ body {
 
     .feature-text p {
         font-size: 0.875rem;
+    }
+
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .feature-icon i {
+        font-size: 20px;
     }
 }
 
@@ -1576,16 +1567,40 @@ body {
 }
 
 .service-title {
-    font-size: 1.75rem;
-    color: var(--text-primary);
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    padding: 0;
-    background: none;
-    border-radius: 0;
-    display: block;
-    scroll-margin-top: 80px;  /* 根據導航欄高度調整 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.learn-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--primary-light);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.learn-more i {
+    font-size: 0.875rem;
+    transition: transform 0.3s ease;
+}
+
+.learn-more:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 44, 0.15);
+}
+
+.learn-more:hover i {
+    transform: translateX(4px);
 }
 
 /* 案例區塊樣式統一 */
@@ -1653,23 +1668,13 @@ body {
     line-height: 1.6;
 }
 
-.tab-content ul {
-    list-style: none;
-    padding: 0;
-}
-
 .tab-content ul li {
-    position: relative;
-    padding-left: 1.5rem;
+    padding-left: 0;
     margin-bottom: 0.75rem;
-    color: var(--text-secondary);
 }
 
 .tab-content ul li:before {
-    content: "✓";
-    color: var(--primary-color);
-    position: absolute;
-    left: 0;
+    display: none;
 }
 
 /* 手機版樣式優化 */
@@ -2146,5 +2151,502 @@ a.cta-button:hover {
 
     .case-navigation .nav-btn i {
         font-size: 0.875rem;
+    }
+}
+
+/* 服務方案頁面樣式 */
+.service-plans {
+    padding-top: 140px;
+    padding-bottom: 80px;
+    background: linear-gradient(135deg, 
+        var(--background-light) 0%,
+        var(--primary-light) 100%);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-header .subtitle {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 107, 44, 0.1);
+    color: var(--primary-color);
+    border-radius: 30px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    font-size: var(--h2-size);
+    line-height: 1.2;
+    color: var(--text-primary);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.plan-section {
+    margin-bottom: 100px;
+}
+
+.plan-section h2 {
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+    font-size: var(--h3-size);
+    font-weight: 700;
+}
+
+.plan-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: var(--container-width);
+    padding: 0 2rem;
+}
+
+.plan-card {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;  /* 減少卡片整體內距 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: flex;           /* 添加 flex 布局 */
+    flex-direction: column;  /* 垂直排列 */
+    height: 100%;           /* 確保所有卡片等高 */
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(255, 107, 44, 0.1);
+}
+
+.plan-type {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: rgba(255, 107, 44, 0.1);
+    color: var(--primary-color);
+    border-radius: 30px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 0.9375rem;
+}
+
+.plan-description {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.plan-card .features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.plan-card .features li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+}
+
+.plan-card .features li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0.25rem;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.price-section {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.original-price {
+    color: var(--text-secondary);
+    text-decoration: line-through;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.plan-card .price {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+}
+
+.price-note {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.plan-btn {
+    display: none;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .service-plans {
+        padding-top: 80px;  /* 減少頂部空間 */
+        padding-bottom: 40px;
+    }
+
+    .section-header {
+        margin-bottom: 40px;  /* 減少標題區塊間距 */
+        padding: 0 1rem;  /* 增加兩側內距 */
+    }
+
+    .section-header .subtitle {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.75rem;  /* 調整標題大小 */
+        margin-top: 0.5rem;
+    }
+
+    .plan-section {
+        margin-bottom: 40px;  /* 減少區塊間距 */
+    }
+
+    .plan-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* 卡片布局調整 */
+    .plan-cards {
+        padding: 0 1rem;
+        gap: 1rem;  /* 減少卡片間距 */
+    }
+
+    .plan-card {
+        padding: 1.25rem;  /* 減少卡片內距 */
+    }
+
+    /* 方案類型標籤 */
+    .plan-type {
+        padding: 0.375rem 0.875rem;
+        font-size: 0.8125rem;
+        margin-bottom: 0.75rem;
+    }
+
+    /* 功能列表調整 */
+    .plan-card .features {
+        margin-bottom: 0.5rem;
+    }
+
+    .plan-card .features li {
+        padding: 0.3125rem 0;  /* 減少項目間距 */
+        padding-left: 1.25rem;  /* 調整圖標間距 */
+        font-size: 0.8125rem;  /* 調整字體大小 */
+        line-height: 1.4;
+    }
+
+    .plan-card .features li::before {
+        font-size: 1rem;
+        left: 0.2rem;
+    }
+
+    /* 贈送項目調整 */
+    .plan-card .features .bonus {
+        position: relative;
+        padding-left: 2.5rem;  /* 增加左側間距，為"贈"字預留空間 */
+    }
+
+    .plan-card .features .bonus::before {
+        content: "贈";  /* 改用文字而不是星號 */
+        color: white;
+        background: var(--primary-color);
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        position: absolute;
+        left: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        line-height: 1;
+    }
+
+    /* 價格區塊調整 */
+    .price-section {
+        padding-top: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .original-price {
+        font-size: 0.75rem;
+        margin-bottom: 0.125rem;
+    }
+
+    .plan-card .price {
+        font-size: 1.5rem;
+        margin-bottom: 0.125rem;
+    }
+
+    .price-note {
+        font-size: 0.75rem;
+    }
+}
+
+/* 特小螢幕調整 */
+@media (max-width: 360px) {
+    .plan-card {
+        padding: 1rem;
+    }
+
+    .plan-type {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.75rem;
+    }
+
+    .plan-card .features li,
+    .plan-card .features .bonus {
+        font-size: 0.75rem;
+        padding: 0.25rem 0;
+    }
+
+    .plan-card .price {
+        font-size: 1.25rem;
+    }
+}
+
+/* 方案標籤樣式 */
+.plan-card {
+    position: relative;
+    overflow: hidden;  /* 確保標籤不會超出卡片範圍 */
+}
+
+.plan-card.featured::before {
+    content: "入門款";  /* 修改標籤文字 */
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 2.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .plan-card.featured::before {
+        top: 15px;
+        right: -40px;
+        padding: 0.2rem 2.5rem;
+        font-size: 0.7rem;
+    }
+}
+
+/* 更新價格區塊樣式 */
+.price-section {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* 選擇方案按鈕樣式 */
+.select-plan-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.select-plan-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 44, 0.2);
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .select-plan-btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9375rem;
+    }
+}
+
+/* 贈送項目樣式 - 移到主要樣式區 */
+.plan-card .features .bonus {
+    position: relative;
+    padding-left: 2.5rem;  /* 增加左側間距，為"贈"字預留空間 */
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.plan-card .features .bonus::before {
+    content: "贈";  /* 改用文字而不是星號 */
+    color: white;
+    background: var(--primary-color);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    line-height: 1;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .plan-card .features .bonus {
+        padding-left: 2rem;  /* 稍微減少左側間距 */
+        font-size: 0.8125rem;
+    }
+
+    .plan-card .features .bonus::before {
+        width: 1.25rem;
+        height: 1.25rem;
+        font-size: 0.675rem;
+        left: 0.25rem;
+    }
+}
+
+/* 特小螢幕調整 */
+@media (max-width: 360px) {
+    .plan-card .features .bonus {
+        padding-left: 1.75rem;
+        font-size: 0.75rem;
+    }
+
+    .plan-card .features .bonus::before {
+        width: 1.125rem;
+        height: 1.125rem;
+        font-size: 0.625rem;
+    }
+}
+
+/* 最划算標籤樣式 */
+.plan-card.best-value::before {
+    content: "最划算";
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: var(--primary-color);  /* 使用主色調 */
+    color: white;
+    padding: 0.25rem 2.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .plan-card.best-value::before {
+        top: 15px;
+        right: -40px;
+        padding: 0.2rem 2.5rem;
+        font-size: 0.7rem;
+    }
+}
+
+/* 店家必備標籤樣式 */
+.plan-card.must-have::before {
+    content: "店家必備";
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: var(--primary-color);  /* 使用主色調 */
+    color: white;
+    padding: 0.25rem 2.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .plan-card.must-have::before {
+        top: 15px;
+        right: -40px;
+        padding: 0.2rem 2.5rem;
+        font-size: 0.7rem;
+    }
+}
+
+/* 單卡片布局樣式 */
+.plan-cards.single-card {
+    grid-template-columns: minmax(300px, 500px);  /* 限制最大寬度 */
+    justify-content: center;  /* 置中對齊 */
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .plan-cards.single-card {
+        grid-template-columns: 1fr;  /* 手機版全寬 */
+    }
+}
+
+/* 本店招牌標籤樣式 */
+.plan-card.signature::before {
+    content: "口碑好評";  /* 更改標籤文字 */
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 2.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+/* 響應式調整保持不變 */
+@media (max-width: 768px) {
+    .plan-card.signature::before {
+        top: 15px;
+        right: -40px;
+        padding: 0.2rem 2.5rem;
+        font-size: 0.7rem;
     }
 } 
