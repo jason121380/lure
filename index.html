@@ -35,6 +35,63 @@
     <link rel="apple-touch-icon" href="favicon/icon.png">
 
     <meta name="theme-color" content="#ffffff">
+    
+    <style>
+        /* 案例卡片百分比數字置中對齊 */
+        .case-stats {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 0 0 15px 0;
+        }
+        
+        .case-stats .stat {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .case-stats .number {
+            display: block;
+            text-align: center;
+            width: 100%;
+            font-weight: bold;
+            font-size: 46px;
+            margin-bottom: 5px;
+            color: #ff6b00;
+        }
+        
+        .case-stats .label {
+            display: block;
+            text-align: center;
+            width: 100%;
+            font-size: 14px;
+        }
+        
+        .case-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .case-content h3 {
+            text-align: center;
+            margin-bottom: 0;
+        }
+        
+        .case-tag {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .case-description {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <!-- 導航欄 -->
@@ -289,132 +346,108 @@
                     <!-- 案例卡片 1 -->
                     <div class="case-card">
                         <div class="case-image">
-                            <img src="https://i.imgur.com/xKy7K9p.jpg" alt="美髮案例">
+                            <img src="images/cases/Sweeskin.jpg" alt="Sweeskin美容SPA">
                         </div>
                         <div class="case-content">
-                            <span class="case-tag">美髮</span>
-                            <h3>台北市知名髮廊</h3>
+                            <span class="case-tag">美容SPA</span>
+                            <h3>SWEESKIN</h3>
                             <div class="case-stats">
                                 <div class="stat">
-                                    <span class="number">200%</span>
-                                    <span class="label">預約率提升</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="number">350%</span>
-                                    <span class="label">社群互動成長</span>
+                                    <span class="number">837%</span>
+                                    <span class="label">月預約提升</span>
                                 </div>
                             </div>
-                            <p class="case-description">導入智能預約系統與社群行銷策略，大幅提升營業額與品牌知名度</p>
+                            <p class="case-description">透過吸引力協助「社群代操、廣告代操」提升淡季客量、業績量</p>
                         </div>
                     </div>
 
                     <!-- 案例卡片 2 -->
                     <div class="case-card">
                         <div class="case-image">
-                            <img src="https://i.imgur.com/QwXjN8L.jpg" alt="美容案例">
+                            <img src="images/cases/Museher.jpg" alt="Museher除毛護膚">
                         </div>
                         <div class="case-content">
-                            <span class="case-tag">美容&SPA</span>
-                            <h3>桃園市美容沙龍</h3>
+                            <span class="case-tag">除毛&護膚</span>
+                            <h3>MUSEHER</h3>
                             <div class="case-stats">
                                 <div class="stat">
-                                    <span class="number">220%</span>
-                                    <span class="label">廣告轉換率</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="number">320%</span>
-                                    <span class="label">新客數成長</span>
+                                    <span class="number">322%</span>
+                                    <span class="label">月預約提升</span>
                                 </div>
                             </div>
-                            <p class="case-description">透過精準廣告投放與客戶追蹤，有效提升新客數與轉換率</p>
+                            <p class="case-description">透過吸引力協助「社群代操、廣告代操、短片」提升預約率並吸引年輕族群</p>
                         </div>
                     </div>
 
                     <!-- 案例卡片 3 -->
                     <div class="case-card">
                         <div class="case-image">
-                            <img src="https://i.imgur.com/L5tM2Vf.jpg" alt="美甲美睫案例">
+                            <img src="images/cases/愛漾美睫.jpg" alt="愛漾美睫紋繡">
                         </div>
                         <div class="case-content">
-                            <span class="case-tag">美甲美睫紋繡</span>
-                            <h3>新竹市美甲美睫</h3>
+                            <span class="case-tag">紋繡</span>
+                            <h3>愛漾美睫</h3>
                             <div class="case-stats">
                                 <div class="stat">
-                                    <span class="number">280%</span>
-                                    <span class="label">營運效率</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="number">400%</span>
-                                    <span class="label">營業額提升</span>
+                                    <span class="number">450%</span>
+                                    <span class="label">詢問度提升</span>
                                 </div>
                             </div>
-                            <p class="case-description">導入智能店務管理系統，優化營運流程，實現業績突破</p>
+                            <p class="case-description">透過吸引力協助「社群優化、廣告投放、線上口碑操作」提高詢問度、客單價</p>
                         </div>
                     </div>
 
                     <!-- 案例卡片 4 -->
                     <div class="case-card">
                         <div class="case-image">
-                            <img src="https://i.imgur.com/L5tM2Vf.jpg" alt="醫美案例">
+                            <img src="images/cases/多家頭皮.jpg" alt="多加頭皮護理">
                         </div>
                         <div class="case-content">
-                            <span class="case-tag">醫美</span>
-                            <h3>台中市醫美診所</h3>
+                            <span class="case-tag">頭皮護理</span>
+                            <h3>多加頭皮</h3>
                             <div class="case-stats">
                                 <div class="stat">
-                                    <span class="number">280%</span>
-                                    <span class="label">營運效率</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="number">400%</span>
-                                    <span class="label">營業額提升</span>
+                                    <span class="number">780%</span>
+                                    <span class="label">預約率提升</span>
                                 </div>
                             </div>
-                            <p class="case-description">導入智能店務管理系統，優化營運流程，實現業績突破</p>
+                            <p class="case-description">透過吸引力協助「社群代操、廣告投放、顧問輔導」提升預約率</p>
                         </div>
                     </div>
 
                     <!-- 案例卡片 5 -->
                     <div class="case-card">
                         <div class="case-image">
-                            <img src="https://i.imgur.com/xKy7K9p.jpg" alt="美髮案例">
+                            <img src="images/cases/eg room.jpg" alt="EG ROOM美髮沙龍">
                         </div>
                         <div class="case-content">
-                            <span class="case-tag">美髮</span>
-                            <h3>高雄市精品髮廊</h3>
+                            <span class="case-tag">美髮沙龍</span>
+                            <h3>EG ROOM</h3>
                             <div class="case-stats">
                                 <div class="stat">
-                                    <span class="number">180%</span>
-                                    <span class="label">回購率提升</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="number">300%</span>
-                                    <span class="label">客單價提升</span>
+                                    <span class="number">500%</span>
+                                    <span class="label">討論度提升</span>
                                 </div>
                             </div>
-                            <p class="case-description">透過數位行銷策略與會員管理系統，提升客戶黏著度與消費力</p>
+                            <p class="case-description">透過吸引力協助「社群企劃、廣告投放、線上口碑操作」提高討論度、詢問度</p>
                         </div>
                     </div>
 
                     <!-- 案例卡片 6 -->
                     <div class="case-card">
                         <div class="case-image">
-                            <img src="https://i.imgur.com/QwXjN8L.jpg" alt="美容案例">
+                            <img src="images/cases/Hair Garden.jpg" alt="HAIR GARDEN美髮沙龍">
                         </div>
                         <div class="case-content">
-                            <span class="case-tag">美容&SPA</span>
-                            <h3>台南市美容中心</h3>
+                            <span class="case-tag">美髮沙龍</span>
+                            <h3>HAIR GARDEN</h3>
                             <div class="case-stats">
                                 <div class="stat">
-                                    <span class="number">250%</span>
-                                    <span class="label">會員數成長</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="number">380%</span>
-                                    <span class="label">營收成長</span>
+                                    <span class="number">430%</span>
+                                    <span class="label">詢問度提升</span>
                                 </div>
                             </div>
-                            <p class="case-description">結合線上預約與會員管理，建立完整的客戶服務體系</p>
+                            <p class="case-description">透過吸引力協助「社群企劃、廣告投放、線上口碑操作」提高討論度、詢問度</p>
                         </div>
                     </div>
                 </div>
