@@ -1,0 +1,11 @@
+<svg width="306" height="280" viewBox="0 0 306 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1.5" y="1.5" width="303" height="277" rx="14" fill="white" stroke="#D7DBE2" stroke-width="3"/>
+  <g transform="translate(153 112)">
+    <path d="M0 -50 A50 50 0 0 1 50 0" stroke="#4285F4" stroke-width="18" fill="none" stroke-linecap="round"/>
+    <path d="M50 0 A50 50 0 0 1 0 50" stroke="#34A853" stroke-width="18" fill="none" stroke-linecap="round"/>
+    <path d="M0 50 A50 50 0 0 1 -50 0" stroke="#FBBC05" stroke-width="18" fill="none" stroke-linecap="round"/>
+    <path d="M-50 0 A50 50 0 0 1 0 -50" stroke="#EA4335" stroke-width="18" fill="none" stroke-linecap="round"/>
+    <path d="M15 0h44" stroke="#4285F4" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <text x="153" y="211" text-anchor="middle" font-family="'Noto Sans TC', 'Noto Sans', 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="600" fill="#5F6368">Google Partner</text>
+</svg>
