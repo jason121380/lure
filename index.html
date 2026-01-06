@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>LURE AI-Martech | 美業數位轉型與業績成長的全方位解決方案</title>
+    <meta name="description" content="專注於美業數位轉型與業績成長的全方位解決方案，提供數位行銷、AI智能系統、顧問服務、行銷課程等服務，協助美業業者實現業績提升。">
+    <meta name="keywords" content="美業數位轉型,AI行銷,數位行銷,美業顧問,美容業行銷,美髮業行銷,醫美行銷">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lure.com.tw/">
+    <meta property="og:title" content="LURE AI-Martech | 美業數位轉型專家">
+    <meta property="og:description" content="專注於美業數位轉型與業績成長的全方位解決方案，協助1000+美業主實現數位轉型、業績成長">
+    <meta property="og:image" content="https://lure.com.tw/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lure.com.tw/">
+    <meta property="twitter:title" content="LURE AI-Martech | 美業數位轉型專家">
+    <meta property="twitter:description" content="專注於美業數位轉型與業績成長的全方位解決方案，協助1000+美業主實現數位轉型、業績成長">
+    <meta property="twitter:image" content="https://lure.com.tw/images/og-image.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lure.com.tw/">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon/icon.png">
+    <link rel="apple-touch-icon" href="favicon/icon.png">
+
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+        /* 案例卡片百分比數字置中對齊 */
+        .case-stats {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 0 0 15px 0;
+        }
+
+        .case-stats .stat {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .case-stats .number {
+            display: block;
+            text-align: center;
+            width: 100%;
+            font-weight: bold;
+            font-size: 46px;
+            margin-bottom: 5px;
+            color: #ff6b00;
+        }
+
+        .case-stats .label {
+            display: block;
+            text-align: center;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .case-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .case-content h3 {
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        .case-tag {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .case-description {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 公告欄 -->
+    <div class="announcement-bar">
+        <div class="container">
+            📢📢📢 歡慶 2026 吸引力榮獲 Meta、Google 雙平台官方認證夥伴⭐️！！立即諮詢領取新年專屬優惠✨
+        </div>
+    </div>
+    <!-- 導航欄 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.png" alt="LURE AI-Martech" class="logo-img">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="#digital-marketing">數位行銷</a>
+                <a href="#tech">AI智能系統</a>
+                <a href="#consulting">顧問服務</a>
+                <a href="#course">行銷課程</a>
+                <a href="#cases">實際案例</a>
+                <a href="#incubator">創業孵化器</a>
+            </div>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 首頁橫幅 -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge" data-translate="hero-badge">全台唯一 美業 Meta、Google 雙認證代理商</span>
+                <div class="hero-badge-large-container">
+                    <img src="images/badge.png" alt="Badge" class="hero-badge-large">
+                </div>
+                <h1 data-translate="hero-title">
+                    吸引力AI數位科技<br>
+                    精準導客 帶動業績提升
+                </h1>
+                <h2 data-translate="hero-subtitle">成功協助1000+美業主 數位轉型、業績成長</h2>
+                <div class="hero-buttons">
+                    <a href="https://lin.ee/DGhde7E" class="cta-button primary" target="_blank"
+                        onclick="window.open('https://lin.ee/DGhde7E', '_blank')" data-translate="try-now">立即諮詢</a>
+                    <a href="#digital-marketing" class="cta-button secondary" data-translate="watch-demo">服務項目</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="number">1247+</span>
+                        <span class="label" data-translate="active-businesses">美業客戶</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="number">252+</span>
+                        <span class="label" data-translate="satisfaction">服務店家</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="number">350%</span>
+                        <span class="label" data-translate="growth">平均業績成長</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- 更新服務項目區塊 -->
+    <section id="digital-marketing" class="services">
+        <div class="container">
+
+            <div class="service-grid">
+                <!-- 數位行銷區塊 -->
+                <div class="service-section" id="digital-marketing">
+                    <h2 class="service-title">
+                        數位行銷
+                        <a href="service-plans.html#digital-marketing" class="learn-more">了解更多 <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </h2>
+                    <div class="service-card">
+                        <div class="service-content">
+                            <div class="service-tabs">
+                                <button class="tab-btn active" data-tab="marketing-1">社群代操</button>
+                                <button class="tab-btn" data-tab="marketing-2">廣告投放</button>
+                                <button class="tab-btn" data-tab="marketing-3">一頁式網站</button>
+                                <button class="tab-btn" data-tab="marketing-4">電商網站</button>
+                                <button class="tab-btn" data-tab="marketing-5">美編設計</button>
+                                <button class="tab-btn" data-tab="marketing-6">IP短影音</button>
+                            </div>
+                            <div class="service-details">
+                                <div class="tab-content active" id="marketing-1">
+                                    <h4>社群代操</h4>
+                                    <p>專業的社群媒體經營策略，幫助品牌建立強大的社群影響力，提升品牌知名度與顧客互動</p>
+                                </div>
+                                <div class="tab-content" id="marketing-2">
+                                    <h4>廣告投放</h4>
+                                    <p>運用AI技術與大數據分析，精準鎖定目標客群，優化廣告投放效益，降低客戶獲取成本</p>
+                                </div>
+                                <div class="tab-content" id="marketing-3">
+                                    <h4>一頁式網站</h4>
+                                    <p>專業的一頁式網站設計，打造吸引人的品牌形象，提升轉換率與業務成效</p>
+                                </div>
+                                <div class="tab-content" id="marketing-4">
+                                    <h4>電商網站</h4>
+                                    <p>專業的電商平台建置服務，協助品牌快速進入電商市場，建立多元銷售管道</p>
+                                </div>
+                                <div class="tab-content" id="marketing-5">
+                                    <h4>美編設計</h4>
+                                    <p>專業的視覺設計服務，提升品牌識別度，創造獨特的品牌視覺體驗</p>
+                                </div>
+                                <div class="tab-content" id="marketing-6">
+                                    <h4>IP短影音</h4>
+                                    <p>專業的影音製作服務，創造吸睛的品牌內容，增加品牌曝光度與互動率</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI智能系統區塊 -->
+                <div class="service-section">
+                    <h2 class="service-title" id="tech">
+                        AI智能系統
+                        <a href="service-plans.html#ai-system" class="learn-more">了解更多 <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </h2>
+                    <div class="service-card">
+                        <div class="service-content">
+                            <div class="service-tabs">
+                                <button class="tab-btn active" data-tab="tab-1">BOS 店務系統</button>
+                                <button class="tab-btn" data-tab="tab-2">Meimate 預約系統</button>
+                                <button class="tab-btn" data-tab="tab-3">AI 法律顧問</button>
+                                <button class="tab-btn" data-tab="tab-4">AI Line客服</button>
+                            </div>
+                            <div class="service-details">
+                                <div class="tab-content active" id="tab-1">
+                                    <h4>BOS 店務系統</h4>
+                                    <p>智能店務管理系統，整合會員、庫存、業績、報表等功能，提升營運效率與管理品質</p>
+                                </div>
+                                <div class="tab-content" id="tab-2">
+                                    <h4>Meimate 預約系統</h4>
+                                    <p>24小時線上預約系統，智能排程管理，自動提醒功能，提升預約率與顧客體驗</p>
+                                </div>
+                                <div class="tab-content" id="tab-3">
+                                    <h4>AI 法律顧問</h4>
+                                    <p>智能法務諮詢系統，提供即時法律建議，協助企業降低法律風險</p>
+                                </div>
+                                <div class="tab-content" id="tab-4">
+                                    <h4>AI Line客服</h4>
+                                    <p>24小時智能客服系統，自動回覆客戶問題，提升客服效率與滿意度</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 顧問服務區塊 -->
+                <div class="service-section" id="consulting">
+                    <h2 class="service-title">
+                        顧問服務
+                        <a href="service-plans.html#consulting" class="learn-more">了解更多 <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </h2>
+                    <div class="service-card">
+                        <div class="service-content">
+                            <div class="service-tabs">
+                                <button class="tab-btn active" data-tab="consulting-1">數位轉型</button>
+                                <button class="tab-btn" data-tab="consulting-2">品牌策略</button>
+                                <button class="tab-btn" data-tab="consulting-3">營運管理</button>
+                                <button class="tab-btn" data-tab="consulting-4">人才培育</button>
+                                <button class="tab-btn" data-tab="consulting-5">股權設計</button>
+                                <button class="tab-btn" data-tab="consulting-6">數據分析</button>
+                            </div>
+                            <div class="service-details">
+                                <div class="tab-content active" id="consulting-1">
+                                    <h4>數位轉型</h4>
+                                    <p>協助企業進行全面數位化轉型，優化營運流程，提升競爭力與營運效率</p>
+                                </div>
+                                <div class="tab-content" id="consulting-2">
+                                    <h4>品牌策略</h4>
+                                    <p>制定有效的品牌策略，打造獨特品牌定位，提升市場競爭力與品牌價值</p>
+                                </div>
+                                <div class="tab-content" id="consulting-3">
+                                    <h4>營運管理</h4>
+                                    <p>優化企業營運流程，建立標準化管理制度，提升營運效率與管理品質</p>
+                                </div>
+                                <div class="tab-content" id="consulting-4">
+                                    <h4>人才培育</h4>
+                                    <p>建立完善的人才培訓與發展機制，提升團隊專業能力與向心力</p>
+                                </div>
+                                <div class="tab-content" id="consulting-5">
+                                    <h4>股權設計</h4>
+                                    <p>設計合理的股權結構與激勵機制，協助企業長期穩定發展</p>
+                                </div>
+                                <div class="tab-content" id="consulting-6">
+                                    <h4>數據分析</h4>
+                                    <p>透過數據分析，優化經營決策，提供精準的市場洞察與策略建議</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 行銷課程區塊 -->
+                <div class="service-section" id="course">
+                    <h2 class="service-title">
+                        行銷課程
+                        <a href="service-plans.html#course" class="learn-more">了解更多 <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </h2>
+                    <div class="service-card">
+                        <div class="service-content">
+                            <div class="service-tabs">
+                                <button class="tab-btn active" data-tab="course-1">網路基礎</button>
+                                <button class="tab-btn" data-tab="course-2">IG版面</button>
+                                <button class="tab-btn" data-tab="course-3">Google商家</button>
+                                <button class="tab-btn" data-tab="course-4">Line 生態圈</button>
+                                <button class="tab-btn" data-tab="course-5">平面拍攝</button>
+                                <button class="tab-btn" data-tab="course-6">影音剪輯</button>
+                            </div>
+                            <div class="service-details">
+                                <div class="tab-content active" id="course-1">
+                                    <h4>網路基礎</h4>
+                                    <p>從零開始學習網路行銷，掌握數位時代的致勝關鍵，建立品牌線上影響力</p>
+                                </div>
+                                <div class="tab-content" id="course-2">
+                                    <h4>IG版面</h4>
+                                    <p>學習 Instagram 視覺規劃與內容經營，打造吸睛的品牌形象與粉絲互動</p>
+                                </div>
+                                <div class="tab-content" id="course-3">
+                                    <h4>Google商家</h4>
+                                    <p>優化 Google 商家曝光度，提升在地搜尋排名，增加品牌知名度</p>
+                                </div>
+                                <div class="tab-content" id="course-4">
+                                    <h4>Line 生態圈</h4>
+                                    <p>掌握 Line 官方帳號、貼文、貼圖等全方位經營策略，建立品牌溝通管道</p>
+                                </div>
+                                <div class="tab-content" id="course-5">
+                                    <h4>平面拍攝</h4>
+                                    <p>學習商業攝影基礎，從構圖、打光到後製，展現商品最佳魅力</p>
+                                </div>
+                                <div class="tab-content" id="course-6">
+                                    <h4>影音剪輯</h4>
+                                    <p>掌握影音製作技巧，從腳本、拍攝到剪輯，創造吸睛的品牌內容</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 更新案例區塊 -->
+    <section id="cases" class="cases">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">案例見證</span>
+                <h2>實際成功案例分享</h2>
+            </div>
+            <div class="case-slider-container">
+                <!-- 移除左右箭頭按鈕 -->
+                <div class="case-slider">
+                    <!-- 案例卡片 1 -->
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="images/cases/Sweeskin.jpg" alt="Sweeskin美容SPA">
+                        </div>
+                        <div class="case-content">
+                            <span class="case-tag">美容SPA</span>
+                            <h3>SWEESKIN</h3>
+                            <div class="case-stats">
+                                <div class="stat">
+                                    <span class="number">837%</span>
+                                    <span class="label">月預約提升</span>
+                                </div>
+                            </div>
+                            <p class="case-description">透過吸引力協助「社群代操、廣告代操」提升淡季客量、業績量</p>
+                        </div>
+                    </div>
+
+                    <!-- 案例卡片 2 -->
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="images/cases/Museher.jpg" alt="Museher除毛護膚">
+                        </div>
+                        <div class="case-content">
+                            <span class="case-tag">除毛&護膚</span>
+                            <h3>MUSEHER</h3>
+                            <div class="case-stats">
+                                <div class="stat">
+                                    <span class="number">322%</span>
+                                    <span class="label">月預約提升</span>
+                                </div>
+                            </div>
+                            <p class="case-description">透過吸引力協助「社群代操、廣告代操、短片」提升預約率並吸引年輕族群</p>
+                        </div>
+                    </div>
+
+                    <!-- 案例卡片 3 -->
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="images/cases/愛漾美睫.jpg" alt="愛漾美睫紋繡">
+                        </div>
+                        <div class="case-content">
+                            <span class="case-tag">紋繡</span>
+                            <h3>愛漾美睫</h3>
+                            <div class="case-stats">
+                                <div class="stat">
+                                    <span class="number">450%</span>
+                                    <span class="label">詢問度提升</span>
+                                </div>
+                            </div>
+                            <p class="case-description">透過吸引力協助「社群優化、廣告投放、線上口碑操作」提高詢問度、客單價</p>
+                        </div>
+                    </div>
+
+                    <!-- 案例卡片 4 -->
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="images/cases/多家頭皮.jpg" alt="多加頭皮護理">
+                        </div>
+                        <div class="case-content">
+                            <span class="case-tag">頭皮護理</span>
+                            <h3>多加頭皮</h3>
+                            <div class="case-stats">
+                                <div class="stat">
+                                    <span class="number">780%</span>
+                                    <span class="label">預約率提升</span>
+                                </div>
+                            </div>
+                            <p class="case-description">透過吸引力協助「社群代操、廣告投放、顧問輔導」提升預約率</p>
+                        </div>
+                    </div>
+
+                    <!-- 案例卡片 5 -->
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="images/cases/eg room.jpg" alt="EG ROOM美髮沙龍">
+                        </div>
+                        <div class="case-content">
+                            <span class="case-tag">美髮沙龍</span>
+                            <h3>EG ROOM</h3>
+                            <div class="case-stats">
+                                <div class="stat">
+                                    <span class="number">500%</span>
+                                    <span class="label">討論度提升</span>
+                                </div>
+                            </div>
+                            <p class="case-description">透過吸引力協助「社群企劃、廣告投放、線上口碑操作」提高討論度、詢問度</p>
+                        </div>
+                    </div>
+
+                    <!-- 案例卡片 6 -->
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="images/cases/Hair Garden.jpg" alt="HAIR GARDEN美髮沙龍">
+                        </div>
+                        <div class="case-content">
+                            <span class="case-tag">美髮沙龍</span>
+                            <h3>HAIR GARDEN</h3>
+                            <div class="case-stats">
+                                <div class="stat">
+                                    <span class="number">430%</span>
+                                    <span class="label">詢問度提升</span>
+                                </div>
+                            </div>
+                            <p class="case-description">透過吸引力協助「社群企劃、廣告投放、線上口碑操作」提高討論度、詢問度</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-navigation">
+                    <button class="nav-btn prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="nav-btn next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="case-dots" style="display: none;"></div>
+        </div>
+    </section>
+
+    <!-- 創業孵化器區塊 -->
+    <section id="incubator" class="incubator">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">創業者最佳幕後團隊</span>
+                <h2>美業創業孵化器</h2>
+            </div>
+            <div class="incubator-content">
+                <div class="incubator-text">
+                    <div class="incubator-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>品牌策略</h3>
+                                <p>品牌定位、視覺設計、商標註冊、市場分析</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>行銷導客</h3>
+                                <p>數位行銷、社群經營、廣告投放、客戶經營</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>科技系統</h3>
+                                <p>預約系統、POS系統、會員管理、數據分析</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>人力資源</h3>
+                                <p>人才招募、教育訓練、績效管理、團隊建立</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>商品採購</h3>
+                                <p>供應商管理、庫存管理、成本控制、產品規劃</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>財務分析</h3>
+                                <p>財務規劃、現金流管理、稅務規劃、投資報酬</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>行政法務</h3>
+                                <p>公司設立、合約審查、法規遵循、風險管理</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>教育資源</h3>
+                                <p>創業課程、技術培訓、經營管理、業界交流</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>AI數據分析</h3>
+                                <p>行銷洞察、顧客分析、營運指標、決策優化</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="incubator-cta">
+                        <a href="https://lin.ee/DGhde7E" class="cta-button primary" target="_blank">立即諮詢</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 更新 logo 牆結構 -->
+    <section class="client-logos">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">合作夥伴</span>
+                <h2>信賴的品牌夥伴</h2>
+            </div>
+            <div class="logo-grid">
+                <!-- 第一行 -->
+                <div class="logo-item"><img src="images/client/1.png" alt="Client 1"></div>
+                <div class="logo-item"><img src="images/client/2.png" alt="Client 2"></div>
+                <div class="logo-item"><img src="images/client/3.png" alt="Client 3"></div>
+                <div class="logo-item"><img src="images/client/4.png" alt="Client 4"></div>
+                <div class="logo-item"><img src="images/client/5.png" alt="Client 5"></div>
+                <div class="logo-item"><img src="images/client/6.png" alt="Client 6"></div>
+                <!-- 第二行 -->
+                <div class="logo-item"><img src="images/client/7.png" alt="Client 7"></div>
+                <div class="logo-item"><img src="images/client/8.png" alt="Client 8"></div>
+                <div class="logo-item"><img src="images/client/9.png" alt="Client 9"></div>
+                <div class="logo-item"><img src="images/client/10.png" alt="Client 10"></div>
+                <div class="logo-item"><img src="images/client/11.png" alt="Client 11"></div>
+                <div class="logo-item"><img src="images/client/12.png" alt="Client 12"></div>
+                <!-- 第三行 -->
+                <div class="logo-item"><img src="images/client/13.png" alt="Client 13"></div>
+                <div class="logo-item"><img src="images/client/14.png" alt="Client 14"></div>
+                <div class="logo-item"><img src="images/client/15.png" alt="Client 15"></div>
+                <div class="logo-item"><img src="images/client/16.png" alt="Client 16"></div>
+                <div class="logo-item"><img src="images/client/17.png" alt="Client 17"></div>
+                <div class="logo-item"><img src="images/client/18.png" alt="Client 18"></div>
+                <!-- 第四行 -->
+                <div class="logo-item"><img src="images/client/19.png" alt="Client 19"></div>
+                <div class="logo-item"><img src="images/client/20.png" alt="Client 20"></div>
+                <div class="logo-item"><img src="images/client/21.png" alt="Client 21"></div>
+                <div class="logo-item"><img src="images/client/22.png" alt="Client 22"></div>
+                <div class="logo-item"><img src="images/client/23.png" alt="Client 23"></div>
+                <div class="logo-item"><img src="images/client/24.png" alt="Client 24"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 更新 footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <!-- 公司資訊 -->
+                    <div class="footer-col company-info">
+                        <img src="images/logo2.png" alt="LURE AI-Martech" class="footer-logo">
+                        <p>美業數位轉型最佳解決方案提供者</p>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/lure_marketing/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://lin.ee/DGhde7E" target="_blank">
+                                <i class="fab fa-line"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- 服務項目 -->
+                    <div class="footer-col">
+                        <h4>服務項目</h4>
+                        <ul>
+                            <li><a href="#digital-marketing">數位行銷</a></li>
+                            <li><a href="#tech">AI智能系統</a></li>
+                            <li><a href="#consulting">顧問服務</a></li>
+                            <li><a href="#course">行銷課程</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 聯絡資訊 -->
+                    <div class="footer-col">
+                        <h4>聯絡資訊</h4>
+                        <ul class="contact-info">
+                            <li>台北市中山區南京東路二段53號2樓</li>
+                            <li>02-2522-3061</li>
+
+                            <li>GUI：90897371</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 吸引力科技有限公司. All rights reserved.</p>
+                <div class="footer-links">
+                    <span>隱私權政策</span>
+                    <span>服務條款</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // 點擊選單項目後自動關閉選單
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script src="announcement.js"></script>
+</body>
+
+</html>
