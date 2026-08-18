@@ -35,6 +35,7 @@
                 <a href="index.html#course">行銷課程</a>
                 <a href="index.html#cases">實際案例</a>
                 <a href="index.html#incubator">創業孵化器</a>
+                <a href="directory/">產品目錄</a>
                 <a href="https://lin.ee/Z39KUUN" class="contact-btn" target="_blank">立即諮詢</a>
             </div>
             <button class="mobile-menu-btn">
@@ -216,6 +217,7 @@
                             <li><a href="index.html#tech">AI智能系統</a></li>
                             <li><a href="index.html#consulting">顧問服務</a></li>
                             <li><a href="index.html#course">行銷課程</a></li>
+                            <li><a href="directory/">產品目錄</a></li>
                         </ul>
                     </div>
 
@@ -240,24 +242,7 @@
         </div>
     </footer>
 
-    <script>
-        // 移动端菜单功能
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenuBtn.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
-        // 点击菜单项后自动关闭菜单
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenuBtn.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
-    </script>
+    <script src="script.js"></script>
     <script src="announcement.js"></script>
 </body>
 

@@ -170,6 +170,8 @@
                 <a href="#course">行銷課程</a>
                 <a href="#cases">實際案例</a>
                 <a href="#incubator">創業孵化器</a>
+                <a href="directory/">產品目錄</a>
+                <a href="https://lin.ee/DGhde7E" class="contact-btn" target="_blank" rel="noopener">立即諮詢</a>
             </div>
             <button class="mobile-menu-btn">
                 <span></span>
@@ -183,32 +185,32 @@
     <header class="hero">
         <div class="container">
             <div class="hero-content">
-                <span class="badge" data-translate="hero-badge">全台唯一 美業 Meta、Google 雙認證代理商</span>
+                <span class="badge">全台唯一 美業 Meta、Google 雙認證代理商</span>
                 <div class="hero-badge-large-container">
                     <img src="images/badge.png" alt="Badge" class="hero-badge-large">
                 </div>
-                <h1 data-translate="hero-title">
+                <h1>
                     吸引力AI數位科技<br>
                     精準導客 帶動業績提升
                 </h1>
-                <h2 data-translate="hero-subtitle">成功協助1000+美業主 數位轉型、業績成長</h2>
+                <h2>成功協助1000+美業主 數位轉型、業績成長</h2>
                 <div class="hero-buttons">
                     <a href="https://lin.ee/DGhde7E" class="cta-button primary" target="_blank"
-                        onclick="window.open('https://lin.ee/DGhde7E', '_blank')" data-translate="try-now">立即諮詢</a>
-                    <a href="#digital-marketing" class="cta-button secondary" data-translate="watch-demo">服務項目</a>
+                        onclick="window.open('https://lin.ee/DGhde7E', '_blank')">立即諮詢</a>
+                    <a href="#digital-marketing" class="cta-button secondary">服務項目</a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="number">1247+</span>
-                        <span class="label" data-translate="active-businesses">美業客戶</span>
+                        <span class="label">美業客戶</span>
                     </div>
                     <div class="stat-item">
                         <span class="number">252+</span>
-                        <span class="label" data-translate="satisfaction">服務店家</span>
+                        <span class="label">服務店家</span>
                     </div>
                     <div class="stat-item">
                         <span class="number">350%</span>
-                        <span class="label" data-translate="growth">平均業績成長</span>
+                        <span class="label">平均業績成長</span>
                     </div>
                 </div>
             </div>
@@ -217,7 +219,7 @@
 
 
     <!-- 更新服務項目區塊 -->
-    <section id="digital-marketing" class="services">
+    <section id="services" class="services">
         <div class="container">
 
             <div class="service-grid">
@@ -469,7 +471,7 @@
                     <!-- 案例卡片 4 -->
                     <div class="case-card">
                         <div class="case-image">
-                            <img src="images/cases/多家頭皮.jpg" alt="多加頭皮護理" loading="lazy">
+                            <img src="images/cases/多加頭皮.jpg" alt="多加頭皮護理" loading="lazy">
                         </div>
                         <div class="case-content">
                             <span class="case-tag">頭皮護理</span>
@@ -701,6 +703,7 @@
                             <li><a href="#tech">AI智能系統</a></li>
                             <li><a href="#consulting">顧問服務</a></li>
                             <li><a href="#course">行銷課程</a></li>
+                            <li><a href="directory/">產品目錄</a></li>
                         </ul>
                     </div>
 
@@ -726,23 +729,6 @@
         </div>
     </footer>
 
-    <script>
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenuBtn.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
-        // 點擊選單項目後自動關閉選單
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenuBtn.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
-    </script>
     <script src="script.js"></script>
     <script src="announcement.js"></script>
 </body>
