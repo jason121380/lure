@@ -41,7 +41,7 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": ["LocalBusiness", "ProfessionalService"],
       "name": "LURE AI-Martech 吸引力科技有限公司",
       "image": "https://lure.com.tw/images/logo.png",
       "@id": "https://lure.com.tw/",
@@ -77,6 +77,21 @@
         "https://www.instagram.com/lure_marketing/",
         "https://lin.ee/DGhde7E"
       ]
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD) for WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://lure.com.tw/#website",
+      "url": "https://lure.com.tw/",
+      "name": "LURE AI-Martech",
+      "inLanguage": "zh-TW",
+      "publisher": {
+        "@id": "https://lure.com.tw/"
+      }
     }
     </script>
 
@@ -160,7 +175,7 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html" class="logo-link">
-                    <img src="images/logo.png" alt="LURE AI-Martech" class="logo-img">
+                    <img src="images/logo.png" alt="LURE AI-Martech" class="logo-img" width="561" height="244">
                 </a>
             </div>
             <div class="nav-links">
@@ -186,7 +201,7 @@
             <div class="hero-content">
                 <span class="badge">全台唯一 美業 Meta、Google 雙認證代理商</span>
                 <div class="hero-badge-large-container">
-                    <img src="images/badge.png" alt="Badge" class="hero-badge-large">
+                    <img src="images/badge.png" alt="Badge" class="hero-badge-large" width="1957" height="666">
                 </div>
                 <h1>
                     吸引力AI數位科技<br>
@@ -226,7 +241,7 @@
                 <div class="service-section" id="digital-marketing">
                     <h2 class="service-title">
                         數位行銷
-                        <a href="service-plans.html#digital-marketing" class="learn-more">了解更多 <i
+                        <a href="service-plans.html#digital-marketing" class="learn-more">了解更多<span class="visually-hidden">數位行銷方案</span> <i
                                 class="fa-solid fa-arrow-right"></i></a>
                     </h2>
                     <div class="service-card">
@@ -273,7 +288,7 @@
                 <div class="service-section">
                     <h2 class="service-title" id="tech">
                         AI智能系統
-                        <a href="service-plans.html#ai-system" class="learn-more">了解更多 <i
+                        <a href="service-plans.html#ai-system" class="learn-more">了解更多<span class="visually-hidden">AI智能系統方案</span> <i
                                 class="fa-solid fa-arrow-right"></i></a>
                     </h2>
                     <div class="service-card">
@@ -310,7 +325,7 @@
                 <div class="service-section" id="consulting">
                     <h2 class="service-title">
                         顧問服務
-                        <a href="service-plans.html#consulting" class="learn-more">了解更多 <i
+                        <a href="service-plans.html#consulting" class="learn-more">了解更多<span class="visually-hidden">顧問服務方案</span> <i
                                 class="fa-solid fa-arrow-right"></i></a>
                     </h2>
                     <div class="service-card">
@@ -357,7 +372,7 @@
                 <div class="service-section" id="course">
                     <h2 class="service-title">
                         行銷課程
-                        <a href="service-plans.html#course" class="learn-more">了解更多 <i
+                        <a href="service-plans.html#course" class="learn-more">了解更多<span class="visually-hidden">行銷課程方案</span> <i
                                 class="fa-solid fa-arrow-right"></i></a>
                     </h2>
                     <div class="service-card">
@@ -416,7 +431,7 @@
                     <!-- 案例卡片 1 -->
                     <div class="case-card">
                         <div class="case-image">
-                            <img src="images/cases/Sweeskin.jpg" alt="Sweeskin美容SPA" loading="lazy">
+                            <img src="images/cases/Sweeskin.jpg" alt="Sweeskin美容SPA" loading="lazy" width="1080" height="1080">
                         </div>
                         <div class="case-content">
                             <span class="case-tag">美容SPA</span>
@@ -434,7 +449,7 @@
                     <!-- 案例卡片 2 -->
                     <div class="case-card">
                         <div class="case-image">
-                            <img src="images/cases/Museher.jpg" alt="Museher除毛護膚" loading="lazy">
+                            <img src="images/cases/Museher.jpg" alt="Museher除毛護膚" loading="lazy" width="960" height="960">
                         </div>
                         <div class="case-content">
                             <span class="case-tag">除毛&護膚</span>
@@ -452,7 +467,7 @@
                     <!-- 案例卡片 3 -->
                     <div class="case-card">
                         <div class="case-image">
-                            <img src="images/cases/愛漾美睫.jpg" alt="愛漾美睫紋繡" loading="lazy">
+                            <img src="images/cases/愛漾美睫.jpg" alt="愛漾美睫紋繡" loading="lazy" width="678" height="678">
                         </div>
                         <div class="case-content">
                             <span class="case-tag">紋繡</span>
@@ -470,7 +485,7 @@
                     <!-- 案例卡片 4 -->
                     <div class="case-card">
                         <div class="case-image">
-                            <img src="images/cases/多加頭皮.jpg" alt="多加頭皮護理" loading="lazy">
+                            <img src="images/cases/多加頭皮.jpg" alt="多加頭皮護理" loading="lazy" width="659" height="658">
                         </div>
                         <div class="case-content">
                             <span class="case-tag">頭皮護理</span>
@@ -488,7 +503,7 @@
                     <!-- 案例卡片 5 -->
                     <div class="case-card">
                         <div class="case-image">
-                            <img src="images/cases/eg room.jpg" alt="EG ROOM美髮沙龍" loading="lazy">
+                            <img src="images/cases/eg room.jpg" alt="EG ROOM美髮沙龍" loading="lazy" width="1080" height="1080">
                         </div>
                         <div class="case-content">
                             <span class="case-tag">美髮沙龍</span>
@@ -506,7 +521,7 @@
                     <!-- 案例卡片 6 -->
                     <div class="case-card">
                         <div class="case-image">
-                            <img src="images/cases/Hair Garden.jpg" alt="HAIR GARDEN美髮沙龍" loading="lazy">
+                            <img src="images/cases/Hair Garden.jpg" alt="HAIR GARDEN美髮沙龍" loading="lazy" width="869" height="869">
                         </div>
                         <div class="case-content">
                             <span class="case-tag">美髮沙龍</span>
@@ -643,33 +658,33 @@
             </div>
             <div class="logo-grid">
                 <!-- 第一行 -->
-                <div class="logo-item"><img src="images/client/1.png" alt="Client 1" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/2.png" alt="Client 2" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/3.png" alt="Client 3" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/4.png" alt="Client 4" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/5.png" alt="Client 5" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/6.png" alt="Client 6" loading="lazy"></div>
+                <div class="logo-item"><img src="images/client/1.png" alt="Client 1" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/2.png" alt="Client 2" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/3.png" alt="Client 3" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/4.png" alt="Client 4" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/5.png" alt="Client 5" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/6.png" alt="Client 6" loading="lazy" width="768" height="432"></div>
                 <!-- 第二行 -->
-                <div class="logo-item"><img src="images/client/7.png" alt="Client 7" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/8.png" alt="Client 8" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/9.png" alt="Client 9" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/10.png" alt="Client 10" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/11.png" alt="Client 11" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/12.png" alt="Client 12" loading="lazy"></div>
+                <div class="logo-item"><img src="images/client/7.png" alt="Client 7" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/8.png" alt="Client 8" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/9.png" alt="Client 9" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/10.png" alt="Client 10" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/11.png" alt="Client 11" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/12.png" alt="Client 12" loading="lazy" width="768" height="432"></div>
                 <!-- 第三行 -->
-                <div class="logo-item"><img src="images/client/13.png" alt="Client 13" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/14.png" alt="Client 14" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/15.png" alt="Client 15" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/16.png" alt="Client 16" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/17.png" alt="Client 17" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/18.png" alt="Client 18" loading="lazy"></div>
+                <div class="logo-item"><img src="images/client/13.png" alt="Client 13" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/14.png" alt="Client 14" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/15.png" alt="Client 15" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/16.png" alt="Client 16" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/17.png" alt="Client 17" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/18.png" alt="Client 18" loading="lazy" width="768" height="432"></div>
                 <!-- 第四行 -->
-                <div class="logo-item"><img src="images/client/19.png" alt="Client 19" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/20.png" alt="Client 20" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/21.png" alt="Client 21" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/22.png" alt="Client 22" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/23.png" alt="Client 23" loading="lazy"></div>
-                <div class="logo-item"><img src="images/client/24.png" alt="Client 24" loading="lazy"></div>
+                <div class="logo-item"><img src="images/client/19.png" alt="Client 19" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/20.png" alt="Client 20" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/21.png" alt="Client 21" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/22.png" alt="Client 22" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/23.png" alt="Client 23" loading="lazy" width="768" height="432"></div>
+                <div class="logo-item"><img src="images/client/24.png" alt="Client 24" loading="lazy" width="768" height="432"></div>
             </div>
         </div>
     </section>
@@ -681,7 +696,7 @@
                 <div class="footer-grid">
                     <!-- 公司資訊 -->
                     <div class="footer-col company-info">
-                        <img src="images/logo2.png" alt="LURE AI-Martech" class="footer-logo">
+                        <img src="images/logo2.png" alt="LURE AI-Martech" class="footer-logo" width="351" height="146">
                         <p>美業數位轉型最佳解決方案提供者</p>
                         <div class="social-links">
                             <a href="https://www.instagram.com/lure_marketing/" target="_blank">
