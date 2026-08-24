@@ -796,6 +796,7 @@ body {
 .footer-logo {
     width: 80px;
     /* 從 100px 縮小到 80px */
+    height: auto;
     margin-bottom: 1rem;
     display: block;
 }
@@ -2220,6 +2221,7 @@ a.cta-button:hover {
 .footer-logo {
     width: 80px;
     /* 從 100px 縮小到 80px */
+    height: auto;
     margin-bottom: 1rem;
     display: block;
 }
